@@ -1,0 +1,14 @@
+.imageList {
+    columns: 6 300px;
+    column-gap: 15px;
+    margin-top: 10px;
+}
+
+img {
+    border: 2px solid #ff3d0036;
+    box-shadow: 4px 7px 7px 0px #00000042;
+    border-radius: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+
+}
