@@ -25,3 +25,61 @@
   font-size: 20px;
   color: #FFFFFF;
 }
+
+.RL-Button {
+  display: inline-block;
+  padding: 8px 30px;
+  font-size: 12px;
+  border: solid 2px #FFFFFF;
+  border-radius: 8px;
+  text-decoration: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: #FFFFFF;
+}
+
+.RL-Button:hover {
+  background-color: #ffc342;
+}
+
+#Register {
+  margin-right: 10px;
+}
+
+
+
+
+@media (min-width: 600px) {
+  .imageList {
+    columns: 3 200px;
+  }
+}
+
+@media (min-width: 900px) {
+  .imageList {
+    columns: 4 250px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .imageList {
+    columns: 6 200px;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    /* Stack items vertically */
+  }
+
+
+
+  .logo {
+    font-size: 1.5rem;
+    /* Responsive logo size */
+    text-align: center;
+    /* Center logo on small screens */
+  }
+
+}

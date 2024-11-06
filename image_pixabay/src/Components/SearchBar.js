@@ -1,38 +1,25 @@
 import React from 'react'
 import { useRef } from 'react';
-import searchImages from '../api';
-import { useState } from 'react';
-import ImageList from './ImageList';
 import './imageList.css';
 
-export default function SearchBar() {
+export default function SearchBar({ getResult }) {
 
     const InputuseRef = useRef(null);
     const handleForm = (e) => {
 
         e.preventDefault();
         const term = InputuseRef.current.value;
-        imageHandle(term);
-    }
-
-
-
-    const [imageList, setImage] = useState([]);
-    const imageHandle = async (term) => {
-        const result = await searchImages(term);
-
-        setImage(result);
-
+        getResult(term);
     }
 
     return (
         <div >
-            <form onSubmit={handleForm}>
+            <form onSubmit={handleForm} id='App-header'>
                 <input ref={InputuseRef} placeholder='Type Here' ></input>
-                <button >Search</button>
+                <button ><i class="fa-solid fa-magnifying-glass" id='serchbtn' /></button>
             </form>
 
-            <ImageList imageListProp={imageList} />
+
         </div>
     )
 }
