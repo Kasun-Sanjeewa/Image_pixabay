@@ -12,3 +12,13 @@ img {
     margin-bottom: 10px;
 
 }
+
+.App-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}

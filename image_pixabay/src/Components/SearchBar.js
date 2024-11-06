@@ -3,6 +3,7 @@ import { useRef } from 'react';
 import searchImages from '../api';
 import { useState } from 'react';
 import ImageList from './ImageList';
+import './imageList.css';
 
 export default function SearchBar() {
 
@@ -25,7 +26,7 @@ export default function SearchBar() {
     }
 
     return (
-        <div className='App-header'>
+        <div >
             <form onSubmit={handleForm}>
                 <input ref={InputuseRef} placeholder='Type Here' ></input>
                 <button >Search</button>
