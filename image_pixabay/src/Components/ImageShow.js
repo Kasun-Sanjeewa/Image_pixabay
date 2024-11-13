@@ -3,7 +3,8 @@ import React from 'react'
 export default function ImageShow({ imageShowProp }) {
     return (
         <div >
-            <img src={imageShowProp.webformatURL} alt={imageShowProp.tags} ></img>
+            <a href={imageShowProp.largeImageURL}><img src={imageShowProp.webformatURL} alt={imageShowProp.tags} ></img></a>
+
         </div>
     )
 }

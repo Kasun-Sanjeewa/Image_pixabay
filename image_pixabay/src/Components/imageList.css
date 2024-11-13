@@ -13,6 +13,20 @@ img {
 
 }
 
+
+
+
+
+.image-Download {
+    padding: 10px 15px;
+    margin-bottom: 30px;
+    margin-left: 5px;
+    border-radius: 10px;
+    background-color: rgb(13, 216, 138);
+    cursor: pointer;
+    border: solid 2px rgb(202, 16, 202);
+}
+
 #App-header {
     display: flex;
     align-items: center;
