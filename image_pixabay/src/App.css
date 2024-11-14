@@ -1,12 +1,11 @@
+/* General Reset and Base Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* Add box-sizing to include padding/border in width/height */
   font-family: 'Roboto', sans-serif;
-  /* Use a consistent font */
+  /* Consistent font across the site */
 }
-
 
 .navBar {
   background-color: #2EACB6;
@@ -14,18 +13,31 @@
   align-items: center;
   justify-content: space-between;
   padding: 15px 20px;
-  /* Reduce padding for smaller screens */
-  position: relative;
+  position: fixed;
+  /* Make the navbar fixed */
+  top: 0;
+  /* Stick it to the top */
+  left: 0;
+  width: 100%;
+  /* Full width */
+  z-index: 1000;
+  /* Ensure it stays on top of other elements */
 }
 
+/* Adjust the top margin of the content below the navbar */
+body {
+  padding-top: 65px;
+  /* Add enough space to avoid the navbar overlapping content */
+}
 
+/* Logo Styling */
 .logo {
-  font-family: 'Roboto', sans-serif;
   font-weight: 600;
   font-size: 20px;
   color: #FFFFFF;
 }
 
+/* Button Styling */
 .RL-Button {
   display: inline-block;
   padding: 8px 30px;
@@ -42,44 +54,73 @@
   background-color: #ffc342;
 }
 
-#Register {
+/* Right-aligned Register Button */
+#Image {
   margin-right: 10px;
 }
 
+/* Media Queries for Responsive Design */
 
-
-
+/* 600px and up (small devices like tablets) */
 @media (min-width: 600px) {
   .imageList {
     columns: 3 200px;
+    /* 3 columns for small devices */
   }
 }
 
+/* 900px and up (medium devices like small laptops) */
 @media (min-width: 900px) {
   .imageList {
     columns: 4 250px;
+    /* 4 columns for medium devices */
   }
 }
 
+/* 1200px and up (larger devices like desktop monitors) */
 @media (min-width: 1200px) {
   .imageList {
     columns: 6 200px;
+    /* 6 columns for large screens */
   }
 }
 
+/* 600px and down (small devices like mobile phones) */
 @media (max-width: 600px) {
-  .navbar {
+  .navBar {
     flex-direction: column;
     /* Stack items vertically */
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
   }
 
-
+  /* Adjust body padding for mobile devices */
+  body {
+    padding-top: 70px;
+    /* Ensure enough space for the fixed navbar */
+  }
 
   .logo {
     font-size: 1.5rem;
     /* Responsive logo size */
     text-align: center;
-    /* Center logo on small screens */
   }
 
+  .RL-Button {
+    font-size: 14px;
+    margin-top: 15px;
+  }
+
+  #Image {
+    padding: 10px 35px;
+    margin-right: 10px;
+  }
+
+  #Video {
+    padding: 10px 35px;
+  }
 }

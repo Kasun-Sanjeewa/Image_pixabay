@@ -10,7 +10,6 @@ const searchImages = async (term) => {
             }
         });
         console.log(response.data.hits);
-        console.log(term);
         return response.data.hits;
     } catch (error) {
         console.error("Error fetching images:", error);

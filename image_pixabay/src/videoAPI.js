@@ -2,7 +2,7 @@ import axios from "axios";
 const API_KEY = '44183681-67a8eacac63dc1adef082c12f';
 const searchVideos = async (term) => {
     try {
-        const response = await axios.get(`https://pixabay.com/api/?key=${API_KEY}&q=`, {
+        const response = await axios.get(`https://pixabay.com/api/videos/?key=${API_KEY}&q=`, {
 
             params: {
                 q: term,

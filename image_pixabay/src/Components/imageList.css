@@ -1,21 +1,21 @@
+/* General Styles */
 .imageList {
     columns: 6 300px;
     column-gap: 15px;
     margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 img {
-    border: 2px solid #ff3d0036;
     box-shadow: 4px 7px 7px 0px #00000042;
     border-radius: 10px;
     width: 100%;
-    margin-bottom: 10px;
-
+    margin-bottom: 15px;
+    display: block;
+    border: solid 1px black;
+    /* Ensures images align correctly */
 }
-
-
-
-
 
 .image-Download {
     padding: 10px 15px;
@@ -35,20 +35,16 @@ img {
     margin: 0 auto;
 }
 
+
+
 #App-header input {
     flex: 1;
-    /* Allow the input to take available space */
     padding: 6px 15px;
-    /* Add padding for comfort */
     font-size: 1rem;
-    /* Set a reasonable font size */
     border: none;
     border-radius: 8px;
-    /* Rounded corners */
     outline: none;
-    /* Remove outline */
     background-color: rgba(255, 255, 255, 0.8);
-    /* Slightly transparent */
 }
 
 #App-header button {
@@ -57,21 +53,88 @@ img {
     margin-left: 5px;
     border: none;
     cursor: pointer;
-    /* Change cursor on hover */
     padding: 8px;
-    /* Add padding to button */
 }
 
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    max-width: 60%;
+    max-height: auto;
+    scale: 65%;
+
+}
+
+.modal-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.8);
+}
+
+
+
+/* Responsive Styles */
 @media (max-width: 600px) {
+
+    /* Image List for smaller screens */
+    .imageList {
+        columns: 2 100px;
+        /* Reducing the number of columns */
+        column-gap: 10px;
+    }
 
     #App-header {
         width: 100%;
         /* Full width on mobile */
         margin-top: 10px;
-        /* Space above the search bar */
+    }
+
+    #App-header input {
+        padding: 10px 12px;
+        /* Adjust padding for comfort on small screens */
+        font-size: 0.9rem;
+        /* Slightly smaller font for better readability */
+    }
+
+    #App-header button {
+        padding: 10px;
+        /* Larger button padding on small screens */
     }
 
     img {
         width: 100%;
+        /* Ensuring images stay responsive */
+    }
+
+    /* Adjusting the download button */
+    .image-Download {
+        width: 100%;
+        /* Make download button full width */
+        padding: 12px;
+        /* More padding on small devices */
+    }
+
+    .modal-content {
+        scale: 150%;
+    }
+}
+
+/* Additional media queries for larger screens */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .imageList {
+        columns: 4 250px;
+        /* Reduce the number of columns for mid-sized screens */
     }
 }

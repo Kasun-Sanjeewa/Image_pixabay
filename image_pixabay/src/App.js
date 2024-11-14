@@ -4,6 +4,8 @@ import { useState } from 'react';
 import ImageList from './Components/ImageList';
 import searchImages from './api'
 
+
+
 function App() {
 
   const [imageList, setImage] = useState([]);
@@ -15,17 +17,20 @@ function App() {
 
   }
 
+
+
   return (
     <div>
       <div className='navBar'>
         <h4 className='logo'>Vision Explorar Pro</h4>
         <SearchBar getResult={getValue} />
         <nav>
-          <button className='RL-Button' id='Register'>Register</button>
-          <button className='RL-Button'>Login</button>
+          <button className='RL-Button' id='Image'>Image</button>
+          <button className='RL-Button' id='Video'>Video</button>
         </nav>
       </div>
       <ImageList imageListProp={imageList} />
+
     </div>
   );
 }
