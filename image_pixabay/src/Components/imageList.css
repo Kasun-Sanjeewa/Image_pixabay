@@ -17,15 +17,24 @@ img {
     /* Ensures images align correctly */
 }
 
-.image-Download {
-    padding: 10px 15px;
-    margin-bottom: 30px;
-    margin-left: 5px;
-    border-radius: 10px;
-    background-color: rgb(13, 216, 138);
-    cursor: pointer;
-    border: solid 2px rgb(202, 16, 202);
+.VideoimageList {
+    columns: 4 400px;
+    column-gap: 30px;
+    margin-top: 10px;
+    margin-left: 100px;
+    margin-right: 100px;
+
 }
+
+video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    display: block;
+}
+
 
 #App-header {
     display: flex;
@@ -76,12 +85,18 @@ img {
 
 }
 
+.Videomodal-content {
+    scale: 60%;
+
+}
+
 .modal-image {
     width: 100%;
     height: auto;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.8);
 }
+
 
 
 

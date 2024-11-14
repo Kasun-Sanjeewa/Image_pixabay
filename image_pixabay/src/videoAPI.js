@@ -6,7 +6,7 @@ const searchVideos = async (term) => {
 
             params: {
                 q: term,
-                per_page: 30
+                per_page: 12
             }
         });
         console.log(response.data.hits);
