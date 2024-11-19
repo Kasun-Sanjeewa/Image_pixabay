@@ -58,6 +58,7 @@ function App() {
   const handleLogoClick = () => {
     window.location.reload();
   }
+
   return (
     <div>
       <div className='navBar'>
@@ -80,6 +81,14 @@ function App() {
           </button>
         </nav>
       </div>
+
+      {/* Welcome Message */}
+      {!searchTerm && imageList.length === 0 && videoList.length === 0 && (
+        <div className="welcome-message">
+          <h1>Welcome to Vision Explorer</h1>
+          <p>Search for stunning images and videos effortlessly.</p>
+        </div>
+      )}
 
       {activePage === 'images' ? (
         <ImageList imageListProp={imageList} />

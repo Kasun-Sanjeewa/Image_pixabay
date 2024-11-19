@@ -86,6 +86,7 @@ body {
     columns: 3 200px;
     /* 3 columns for small devices */
   }
+
 }
 
 /* 900px and up (medium devices like small laptops) */
@@ -119,7 +120,7 @@ body {
 
   /* Adjust body padding for mobile devices */
   body {
-    padding-top: 70px;
+    padding-top: 150px;
     /* Ensure enough space for the fixed navbar */
   }
 
@@ -141,5 +142,44 @@ body {
 
   #Video {
     padding: 10px 35px;
+  }
+
+  .VideoimageList {
+    display: inline;
+  }
+
+  video {
+    scale: 85%;
+  }
+
+}
+
+/* Welcome Message Styling */
+.welcome-message {
+  text-align: center;
+  margin-top: 300px;
+  /* Position it below the navbar */
+  color: #444;
+}
+
+.welcome-message h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #2EACB6;
+  margin-bottom: 10px;
+}
+
+.welcome-message p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+@media (max-width: 600px) {
+  .welcome-message h1 {
+    font-size: 2rem;
+  }
+
+  .welcome-message p {
+    font-size: 1rem;
   }
 }
