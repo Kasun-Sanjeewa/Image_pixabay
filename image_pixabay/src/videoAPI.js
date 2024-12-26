@@ -1,5 +1,5 @@
 import axios from "axios";
-const API_KEY = '44183681-67a8eacac63dc1adef082c12f';
+const API_KEY = 'API';
 const searchVideos = async (term) => {
     try {
         const response = await axios.get(`https://pixabay.com/api/videos/?key=${API_KEY}&q=`, {
